@@ -1,29 +1,17 @@
 const express = require('express');
-const Order = require('../models/Order');
-const { verifyCustomer, verifyAdmin } = require('../middlewares/authMiddleware');
 const router = express.Router();
+const orderController = require('../controllers/orderController');
+const auth = require('../middlewares/authMiddleware');
 
-// Create Order
-router.post('/create', verifyCustomer, async (req, res) => {
-  const { products, totalPrice, shippingAddress } = req.body;
+// Customer routes
+router.post('/place-order', auth(['customer']), orderController.placeOrder);
+router.get('/my-orders', auth(['customer']), orderController.getMyOrders);
 
-  try {
-    const order = new Order({ customer: req.user.id, products, totalPrice, shippingAddress });
-    await order.save();
-    res.status(201).json({ message: 'Order placed successfully', order });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+// Seller routes
+router.get('/seller-orders', auth(['seller']), orderController.getSellerOrders);
+router.put('/update-order-status/:id', auth(['seller']), orderController.updateOrderStatus);
 
-// Update Order Status (Admin Only)
-router.put('/update/:id', verifyAdmin, async (req, res) => {
-  try {
-    const order = await Order.findByIdAndUpdate(req.params.id, { status: req.body.status }, { new: true });
-    res.status(200).json(order);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+// Admin routes
+router.get('/all-orders', auth(['admin']), orderController.getAllOrders);
 
 module.exports = router;
