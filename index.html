@@ -3,60 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>College Jaankaar</title>
+  <title>College Jaankaar | Creative Stationery & Gifts</title>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="logo">College Jaankaar</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1 class="title">Welcome to College Jaankaar</h1>
+      <p class="subtitle">A to Z Store for Creative Stationery & Gifts</p>
+      <button class="btn">Explore Now</button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Your One-Stop Creative Store</h1>
-    <p>Discover unique stationery and gifts that inspire creativity.</p>
-    <a href="#products" class="btn">Explore Now</a>
-  </section>
-
   <!-- Products Section -->
-  <section id="products" class="products">
-    <h2>Our Products</h2>
-    <div class="product-list">
-      <!-- Products will be dynamically populated with JS -->
+  <section class="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img
+            src="//www.mangopeopleshop.com/cdn/shop/files/cute-and-adorable-unicorn-bag-stationery-gift-hamper-hampers-625_1080x1080.jpg?v=1705493288"
+            alt="Unicorn Bag"
+          />
+          <h3>Unicorn Bag</h3>
+          <p>Perfect for organizing your essentials with a touch of magic.</p>
+          <button class="btn">Buy Now</button>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x300" alt="Custom Notebook" />
+          <h3>Custom Notebook</h3>
+          <p>Personalize your notes with stylish designs and covers.</p>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About College Jaankaar</h2>
-    <p>We bring you a wide range of creative stationery and gift items to brighten your day. Our mission is to deliver quality and unique products to all our customers.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <h2>Discover More</h2>
+      <video controls>
+        <source src="https://www.youtube.com/shorts/8vijNPoI2Po?t=15&feature=share" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 College Jaankaar. All Rights Reserved.</p>
+    <div class="container">
+      <p>© 2024 College Jaankaar. All Rights Reserved.</p>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
