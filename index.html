@@ -7,73 +7,56 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
-    <div class="container">
-      <h1>College Jaankaar</h1>
-      <p>Your one-stop shop for creative stationery and gifts!</p>
-      <a href="#products" class="btn">Shop Now</a>
-    </div>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">College Jaankaar</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>
-        At College Jaankaar, we aim to bring creativity to your desk! Discover a wide range of stationery, unique gift items, and more to inspire your daily life.
-      </p>
-    </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Your One-Stop Creative Store</h1>
+    <p>Discover unique stationery and gifts that inspire creativity.</p>
+    <a href="#products" class="btn">Explore Now</a>
   </section>
-  <script> src="script.js"></script>
 
   <!-- Products Section -->
   <section id="products" class="products">
-    <div class="container">
-      <h2>Our Products</h2>
-      <div class="product-list">
-        <div class="product">
-          <img src="product1.jpg" alt="Product 1">
-          <h3>Stylish Notebooks</h3>
-          <p>Perfect for students and professionals.</p>
-          <button class="btn">View Details</button>
-        </div>
-        <div class="product">
-          <img src="product2.jpg" alt="Product 2">
-          <h3>Gift Sets</h3>
-          <p>Ideal for birthdays and special occasions.</p>
-          <button class="btn">View Details</button>
-        </div>
-        <div class="product">
-          <img src="product3.jpg" alt="Product 3">
-          <h3>Colorful Pens</h3>
-          <p>Brighten your notes and sketches!</p>
-          <button class="btn">View Details</button>
-        </div>
-      </div>
+    <h2>Our Products</h2>
+    <div class="product-list">
+      <!-- Products will be dynamically populated with JS -->
     </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About College Jaankaar</h2>
+    <p>We bring you a wide range of creative stationery and gift items to brighten your day. Our mission is to deliver quality and unique products to all our customers.</p>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 College Jaankaar. All rights reserved.</p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 College Jaankaar. All Rights Reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
